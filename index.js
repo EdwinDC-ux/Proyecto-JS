@@ -132,8 +132,8 @@ var versions = [
 
 const sortVersions = (versions) => {
     let principalVersions = []
-    versions.forEach(({version,name, description}) => {
-        version.length === 1 ? principalVersions.push({... version, subVersions : []}) : null
+    versions.forEach((item) => {
+        item.version.length === 1 ? principalVersions.push({... item, subVersions : []}) : null
     })
     return principalVersions
 }
