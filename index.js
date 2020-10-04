@@ -1,9 +1,3 @@
-
-
-/*input*/
-/*
-
-*/
 /*output*/
 /*
 [
@@ -135,4 +129,15 @@ var versions = [
         description:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus, eligendi."
     }
 ]
+
+const sortVersions = (versions) => {
+    let principalVersions = []
+    versions.forEach((item) => {
+        item.version.length === 1 ? principalVersions.push({... item, subVersions : []}) : null
+    })
+    return principalVersions
+}
+
+console.log(sortVersions(versions))
+
 
