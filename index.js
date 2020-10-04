@@ -136,3 +136,12 @@ var versions = [
     }
 ]
 
+versions.sort(function (a, b){
+    return (a.version - b.version)
+})
+//console.log(versions)
+
+items = [ {id:1, value:3, perc:0.5}, {id:2, value:2, perc:0.3}, {id:3, value:1, perc:0.2} ]
+items.sort(function (a, b){
+    return (a.value - b.value)
+})
