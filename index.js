@@ -138,6 +138,13 @@ const sortVersions = (versions) => {
     return principalVersions
 }
 
-console.log(sortVersions(versions))
-
-
+const getSubVersions = (versions) => {
+    let principalVersions = sortVersions(versions)
+    versions.forEach((item) =>{
+        principalVersions.forEach((subItem)=>{
+            item.version[0]===subItem.version[0] && item.version[1] != undefined ? subItem.subVersions.push({... item}) : null
+        })
+    })
+    console.log(principalVersions)
+}
+getSubVersions(versions)
